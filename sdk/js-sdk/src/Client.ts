@@ -4,6 +4,7 @@ import State from './State';
 import Hello from './Hello';
 import Invoker from './Invoker';
 import Lock from './Lock';
+import Sequencer from './Sequencer';
 
 export default class Client {
   readonly port: string;
@@ -13,6 +14,7 @@ export default class Client {
   readonly state: State;
   readonly invoker: Invoker;
   readonly lock: Lock;
+  readonly sequencer: Sequencer;
   // readonly secret: IClientSecret;
   // readonly actor: IClientActor;
 
@@ -26,5 +28,6 @@ export default class Client {
     this.state = new State(this.runtime);
     this.invoker = new Invoker(this.runtime);
     this.lock = new Lock(this.runtime);
+    this.sequencer = new Sequencer(this.runtime);
   }
 }
