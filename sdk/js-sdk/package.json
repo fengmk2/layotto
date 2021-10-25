@@ -2,7 +2,13 @@
   "name": "layotto",
   "version": "0.0.1",
   "description": "Layotto Node.js SDK",
-  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist",
     "proto",
